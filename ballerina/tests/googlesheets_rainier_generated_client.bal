@@ -165,12 +165,12 @@ public isolated client class GoogleSheetsRainierClient {
     }
 
     isolated resource function get employees(EmployeeTargetType targetType = <>) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.datastore.GoogleSheetsProcessor",
+        'class: "io.ballerina.stdlib.persist.googlesheets.datastore.GoogleSheetsProcessor",
         name: "query"
     } external;
 
     isolated resource function get employees/[string empNo](EmployeeTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.datastore.GoogleSheetsProcessor",
+        'class: "io.ballerina.stdlib.persist.googlesheets.datastore.GoogleSheetsProcessor",
         name: "queryOne"
     } external;
 
@@ -204,12 +204,12 @@ public isolated client class GoogleSheetsRainierClient {
     }
 
     isolated resource function get workspaces(WorkspaceTargetType targetType = <>) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.datastore.GoogleSheetsProcessor",
+        'class: "io.ballerina.stdlib.persist.googlesheets.datastore.GoogleSheetsProcessor",
         name: "query"
     } external;
 
     isolated resource function get workspaces/[string workspaceId](WorkspaceTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.datastore.GoogleSheetsProcessor",
+        'class: "io.ballerina.stdlib.persist.googlesheets.datastore.GoogleSheetsProcessor",
         name: "queryOne"
     } external;
 
@@ -243,12 +243,12 @@ public isolated client class GoogleSheetsRainierClient {
     }
 
     isolated resource function get buildings(BuildingTargetType targetType = <>) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.datastore.GoogleSheetsProcessor",
+        'class: "io.ballerina.stdlib.persist.googlesheets.datastore.GoogleSheetsProcessor",
         name: "query"
     } external;
 
     isolated resource function get buildings/[string buildingCode](BuildingTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.datastore.GoogleSheetsProcessor",
+        'class: "io.ballerina.stdlib.persist.googlesheets.datastore.GoogleSheetsProcessor",
         name: "queryOne"
     } external;
 
@@ -282,12 +282,12 @@ public isolated client class GoogleSheetsRainierClient {
     }
 
     isolated resource function get departments(DepartmentTargetType targetType = <>) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.datastore.GoogleSheetsProcessor",
+        'class: "io.ballerina.stdlib.persist.googlesheets.datastore.GoogleSheetsProcessor",
         name: "query"
     } external;
 
     isolated resource function get departments/[string deptNo](DepartmentTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.datastore.GoogleSheetsProcessor",
+        'class: "io.ballerina.stdlib.persist.googlesheets.datastore.GoogleSheetsProcessor",
         name: "queryOne"
     } external;
 
@@ -321,12 +321,12 @@ public isolated client class GoogleSheetsRainierClient {
     }
 
     isolated resource function get orderitems(OrderItemTargetType targetType = <>) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.datastore.GoogleSheetsProcessor",
+        'class: "io.ballerina.stdlib.persist.googlesheets.datastore.GoogleSheetsProcessor",
         name: "query"
     } external;
 
     isolated resource function get orderitems/[string orderId]/[string itemId](OrderItemTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.datastore.GoogleSheetsProcessor",
+        'class: "io.ballerina.stdlib.persist.googlesheets.datastore.GoogleSheetsProcessor",
         name: "queryOne"
     } external;
 
@@ -538,27 +538,27 @@ public isolated client class GoogleSheetsRainierClient {
     }
 
     private isolated function queryEmployeesStream(EmployeeTargetType targetType = <>) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.datastore.GoogleSheetsProcessor",
+        'class: "io.ballerina.stdlib.persist.googlesheets.datastore.GoogleSheetsProcessor",
         name: "queryStream"
     } external;
 
     private isolated function queryBuildingsStream(BuildingTargetType targetType = <>) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.datastore.GoogleSheetsProcessor",
+        'class: "io.ballerina.stdlib.persist.googlesheets.datastore.GoogleSheetsProcessor",
         name: "queryStream"
     } external;
 
     private isolated function queryDepartmentsStream(DepartmentTargetType targetType = <>) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.datastore.GoogleSheetsProcessor",
+        'class: "io.ballerina.stdlib.persist.googlesheets.datastore.GoogleSheetsProcessor",
         name: "queryStream"
     } external;
 
     private isolated function queryWorkspacesStream(WorkspaceTargetType targetType = <>) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.datastore.GoogleSheetsProcessor",
+        'class: "io.ballerina.stdlib.persist.googlesheets.datastore.GoogleSheetsProcessor",
         name: "queryStream"
     } external;
 
     private isolated function queryOrderItemsStream(OrderItemTargetType targetType = <>) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.datastore.GoogleSheetsProcessor",
+        'class: "io.ballerina.stdlib.persist.googlesheets.datastore.GoogleSheetsProcessor",
         name: "queryStream"
     } external;
 }

@@ -38,7 +38,7 @@ isolated function getKeyFromAlreadyExistsErrorMessage(string errorMessage) retur
 }
 
 isolated function convertToArray(typedesc<record {}> elementType, record {}[] arr) returns elementType[] = @java:Method {
-    'class: "io.ballerina.stdlib.persist.Utils"
+    'class: "io.ballerina.stdlib.persist.googlesheets.Utils"
 } external;
 
 isolated function arrayToParameterizedQuery(string[] arr, sql:ParameterizedQuery delimiter = `,`) returns sql:ParameterizedQuery {

@@ -272,24 +272,6 @@ modules = [
 
 [[package]]
 org = "ballerina"
-name = "persistgooglesheets"
-version = "1.0.0"
-dependencies = [
-	{org = "ballerina", name = "http"},
-	{org = "ballerina", name = "jballerina.java"},
-	{org = "ballerina", name = "persist"},
-	{org = "ballerina", name = "sql"},
-	{org = "ballerina", name = "test"},
-	{org = "ballerina", name = "time"},
-	{org = "ballerina", name = "url"},
-	{org = "ballerinax", name = "googleapis.sheets"}
-]
-modules = [
-	{org = "ballerina", packageName = "persistgooglesheets", moduleName = "persistgooglesheets"}
-]
-
-[[package]]
-org = "ballerina"
 name = "regex"
 version = "1.4.3"
 dependencies = [
@@ -381,5 +363,23 @@ dependencies = [
 ]
 modules = [
 	{org = "ballerinax", packageName = "googleapis.sheets", moduleName = "googleapis.sheets"}
+]
+
+[[package]]
+org = "ballerinax"
+name = "persist.googlesheets"
+version = "1.0.0"
+dependencies = [
+	{org = "ballerina", name = "http"},
+	{org = "ballerina", name = "jballerina.java"},
+	{org = "ballerina", name = "persist"},
+	{org = "ballerina", name = "sql"},
+	{org = "ballerina", name = "test"},
+	{org = "ballerina", name = "time"},
+	{org = "ballerina", name = "url"},
+	{org = "ballerinax", name = "googleapis.sheets"}
+]
+modules = [
+	{org = "ballerinax", packageName = "persist.googlesheets", moduleName = "persist.googlesheets"}
 ]
 

@@ -21,5 +21,5 @@ isolated function init() {
 }
 
 isolated function setModule() = @java:Method {
-    'class: "io.ballerina.stdlib.persist.ModuleUtils"
+    'class: "io.ballerina.stdlib.persist.googlesheets.ModuleUtils"
 } external;

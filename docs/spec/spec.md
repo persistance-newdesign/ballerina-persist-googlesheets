@@ -452,12 +452,12 @@ public client class RainierClient {
     }
 
     isolated resource function get employee(EmployeeTargetType targetType = <>) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.datastore.MySQLProcessor",
+        'class: "io.ballerina.stdlib.persist.googlesheets.datastore.MySQLProcessor",
         name: "query"
     } external;
 
     isolated resource function get employee/[string empNo](EmployeeTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.datastore.MySQLProcessor",
+        'class: "io.ballerina.stdlib.persist.googlesheets.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
@@ -479,12 +479,12 @@ public client class RainierClient {
     }
 
     isolated resource function get workspace(WorkspaceTargetType targetType = <>) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.datastore.MySQLProcessor",
+        'class: "io.ballerina.stdlib.persist.googlesheets.datastore.MySQLProcessor",
         name: "query"
     } external;
 
     isolated resource function get workspace/[string workspaceId](WorkspaceTargetType targetType = <>) returns targetType|persist:Error  = @java:Method {
-        'class: "io.ballerina.stdlib.persist.datastore.MySQLProcessor",
+        'class: "io.ballerina.stdlib.persist.googlesheets.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
@@ -506,12 +506,12 @@ public client class RainierClient {
     }
 
     isolated resource function get building(BuildingTargetType targetType = <>) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.datastore.MySQLProcessor",
+        'class: "io.ballerina.stdlib.persist.googlesheets.datastore.MySQLProcessor",
         name: "query"
     } external;
 
     isolated resource function get building/[string buildingCode](BuildingTargetType targetType = <>) returns targetType|persist:Error  = @java:Method {
-        'class: "io.ballerina.stdlib.persist.datastore.MySQLProcessor",
+        'class: "io.ballerina.stdlib.persist.googlesheets.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
@@ -534,12 +534,12 @@ public client class RainierClient {
     }
 
     isolated resource function get department(DepartmentTargetType targetType = <>) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.datastore.MySQLProcessor",
+        'class: "io.ballerina.stdlib.persist.googlesheets.datastore.MySQLProcessor",
         name: "query"
     } external;
 
     isolated resource function get department/[string deptNo](DepartmentTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.datastore.MySQLProcessor",
+        'class: "io.ballerina.stdlib.persist.googlesheets.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
@@ -561,12 +561,12 @@ public client class RainierClient {
     }
 
     isolated resource function get orderitem(OrderItemTargetType targetType = <>) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.datastore.MySQLProcessor",
+        'class: "io.ballerina.stdlib.persist.googlesheets.datastore.MySQLProcessor",
         name: "query"
     } external;
 
     isolated resource function get orderitem/[string orderId]/[string itemId](OrderItemTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.datastore.MySQLProcessor",
+        'class: "io.ballerina.stdlib.persist.googlesheets.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 

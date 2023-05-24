@@ -16,7 +16,7 @@
  * under the License.
  */
 
-package io.ballerina.stdlib.persist;
+package io.ballerina.stdlib.persist.googlesheets;
 
 import io.ballerina.runtime.api.Module;
 import io.ballerina.runtime.api.values.BString;

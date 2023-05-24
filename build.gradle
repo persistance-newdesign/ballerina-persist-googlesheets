@@ -24,7 +24,7 @@ plugins {
 
 description = 'Ballerina - Persist'
 
-def packageName = "persistgooglesheets"
+def packageName = "persist.googlesheets"
 
 ext.ballerinaLangVersion = project.ballerinaLangVersion
 

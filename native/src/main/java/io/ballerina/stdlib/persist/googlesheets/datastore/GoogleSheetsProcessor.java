@@ -17,7 +17,7 @@
  */
 
 
-package io.ballerina.stdlib.persist.datastore;
+package io.ballerina.stdlib.persist.googlesheets.datastore;
 
 import io.ballerina.runtime.api.Environment;
 import io.ballerina.runtime.api.Future;
@@ -37,18 +37,18 @@ import io.ballerina.runtime.api.values.BObject;
 import io.ballerina.runtime.api.values.BStream;
 import io.ballerina.runtime.api.values.BString;
 import io.ballerina.runtime.api.values.BTypedesc;
-import io.ballerina.stdlib.persist.Constants;
-import io.ballerina.stdlib.persist.ModuleUtils;
+import io.ballerina.stdlib.persist.googlesheets.Constants;
+import io.ballerina.stdlib.persist.googlesheets.ModuleUtils;
 
-import static io.ballerina.stdlib.persist.Constants.ERROR;
-import static io.ballerina.stdlib.persist.Constants.KEY_FIELDS;
-import static io.ballerina.stdlib.persist.Utils.getEntity;
-import static io.ballerina.stdlib.persist.Utils.getEntityFromStreamMethod;
-import static io.ballerina.stdlib.persist.Utils.getFieldTypes;
-import static io.ballerina.stdlib.persist.Utils.getKey;
-import static io.ballerina.stdlib.persist.Utils.getMetadata;
-import static io.ballerina.stdlib.persist.Utils.getPersistClient;
-import static io.ballerina.stdlib.persist.Utils.getRecordTypeWithKeyFields;
+import static io.ballerina.stdlib.persist.googlesheets.Constants.ERROR;
+import static io.ballerina.stdlib.persist.googlesheets.Constants.KEY_FIELDS;
+import static io.ballerina.stdlib.persist.googlesheets.Utils.getEntity;
+import static io.ballerina.stdlib.persist.googlesheets.Utils.getEntityFromStreamMethod;
+import static io.ballerina.stdlib.persist.googlesheets.Utils.getFieldTypes;
+import static io.ballerina.stdlib.persist.googlesheets.Utils.getKey;
+import static io.ballerina.stdlib.persist.googlesheets.Utils.getMetadata;
+import static io.ballerina.stdlib.persist.googlesheets.Utils.getPersistClient;
+import static io.ballerina.stdlib.persist.googlesheets.Utils.getRecordTypeWithKeyFields;
 
 /**
  * This class provides the GoogleSheets query processing implementations for persistence.
