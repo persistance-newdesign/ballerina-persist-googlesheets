@@ -92,8 +92,6 @@ subprojects {
         ballerinaStdLibs "org.ballerinalang:transaction-ballerina:${stdlibTransactionVersion}"
         ballerinaStdLibs "io.ballerina.stdlib:sql-ballerina:${stdlibSqlVersion}"
         ballerinaStdLibs "io.ballerina.stdlib:persist-ballerina:${stdlibPersistVersion}"
-        ballerinaStdLibs "io.ballerina.stdlib:mysql-ballerina:${testStdlibMysqlVersion}"
-        ballerinaStdLibs "io.ballerina.stdlib:mysql.driver-ballerina:${stdlibMysqlDriverVersion}"
         ballerinaStdLibs "io.ballerina.stdlib:observe-ballerina:${observeVersion}"
         ballerinaStdLibs "io.ballerina:observe-ballerina:${observeInternalVersion}"
     }
@@ -101,19 +99,19 @@ subprojects {
 
 def moduleVersion = project.version.replace("-SNAPSHOT", "")
 
-//release {
-//    failOnPublishNeeded = false
-//    failOnSnapshotDependencies = true
-//
-//    buildTasks = ['build']
-//    versionPropertyFile = 'gradle.properties'
-//    tagTemplate = 'v$version'
-//
-//    git {
-//        requireBranch = "release-${moduleVersion}"
-//        pushToRemote = 'origin'
-//    }
-//}
+release {
+   failOnPublishNeeded = false
+   failOnSnapshotDependencies = true
+
+   buildTasks = ['build']
+   versionPropertyFile = 'gradle.properties'
+   tagTemplate = 'v$version'
+
+   git {
+       requireBranch = "release-${moduleVersion}"
+       pushToRemote = 'origin'
+   }
+}
 
 task build {
     dependsOn(":${packageName}-ballerina:build")
