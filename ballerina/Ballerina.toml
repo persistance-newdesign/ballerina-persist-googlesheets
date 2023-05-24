@@ -1,16 +1,16 @@
 [package]
 org = "ballerina"
-name = "persist_googlesheets"
+name = "persistgooglesheets"
 version = "1.0.0"
 authors = ["Ballerina"]
-keywords = ["persist-googlesheets", "experimental"]
+keywords = ["persistgooglesheets", "experimental"]
 repository = "https://github.com/ballerina-platform/module-ballerina-persist"
 icon = "icon.png"
 license = ["Apache-2.0"]
 distribution = "2201.5.0"
 
 [[platform.java11.dependency]]
-groupId = "io.ballerina.persist-googlesheets"
+groupId = "io.ballerina.persistgooglesheets"
 artifactId = "persist-googlesheets-native"
 version = "1.0.0"
-path = "../native/build/libs/persist-googlesheets-native-1.0.0-SNAPSHOT.jar"
+path = "../native/build/libs/persistgooglesheets-native-1.0.0-SNAPSHOT.jar"

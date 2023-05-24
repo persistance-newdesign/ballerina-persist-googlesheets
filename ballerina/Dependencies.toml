@@ -272,7 +272,7 @@ modules = [
 
 [[package]]
 org = "ballerina"
-name = "persist_googlesheets"
+name = "persistgooglesheets"
 version = "1.0.0"
 dependencies = [
 	{org = "ballerina", name = "http"},
@@ -285,7 +285,7 @@ dependencies = [
 	{org = "ballerinax", name = "googleapis.sheets"}
 ]
 modules = [
-	{org = "ballerina", packageName = "persist_googlesheets", moduleName = "persist_googlesheets"}
+	{org = "ballerina", packageName = "persistgooglesheets", moduleName = "persistgooglesheets"}
 ]
 
 [[package]]
