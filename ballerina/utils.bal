@@ -14,16 +14,10 @@
 // specific language governing permissions and limitations
 // under the License.
 
-import ballerina/sql;
 import ballerina/persist;
 import ballerina/jballerina.java;
 import ballerinax/googleapis.sheets;
 
-isolated function stringToParameterizedQuery(string queryStr) returns sql:ParameterizedQuery {
-    sql:ParameterizedQuery query = ``;
-    query.strings = [queryStr];
-    return query;
-}
 
 isolated function getKeyFromAlreadyExistsErrorMessage(string errorMessage) returns string|persist:Error {
     int? startIndex = errorMessage.indexOf(".Duplicate entry '");
@@ -41,13 +35,6 @@ isolated function convertToArray(typedesc<record {}> elementType, record {}[] ar
     'class: "io.ballerina.stdlib.persist.googlesheets.Utils"
 } external;
 
-isolated function arrayToParameterizedQuery(string[] arr, sql:ParameterizedQuery delimiter = `,`) returns sql:ParameterizedQuery {
-    sql:ParameterizedQuery query = stringToParameterizedQuery(arr[0]);
-    foreach int i in 1 ..< arr.length() {
-        query = sql:queryConcat(query, delimiter, stringToParameterizedQuery(arr[i]));
-    }
-    return query;
-}
 
 # Closes the entity stream.
 #
